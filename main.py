@@ -204,5 +204,42 @@ import numpy as np
 # rotate_array=np.rot90(image_array)
 # print(rotate_array)
 
+#Date:06-11-2024
+#Create ID from values 1-10 
+# arr=np.arange(1,10,1)
+# print(arr)
 
-print(".")
+# perform element-wise multiplication of 2 array by generating arrays
+# arr1=np.arange(1,10,2)
+# print(arr1)
+# arr2=np.arange(0,10,2)
+# print(arr2)
+# print("multi",np.multiply(arr2,arr1))
+# multiarray=arr1*arr2
+# print(multiarray)
+
+#Generate 3D array by using random array and find mean
+  
+# random_element=np.random.rand(2,2,4)
+# print(random_element)
+# print("mean",np.mean(random_element))
+# generate 3D array by using random array and find mean of it
+# arr=np.arange(1,13,1)
+# print(arr)
+# arr1=arr.reshape(2,2,3)
+# print(arr1)
+# print("mean",np.mean(arr1))
+
+# 
+arr=np.arange(1,17,1)
+print(arr)
+arr1=arr.reshape(4,4)
+print(arr1)
+
+subarray=arr1[0:2,0:2]
+print(subarray)
+
+
+
+
+
