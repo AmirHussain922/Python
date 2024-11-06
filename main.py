@@ -203,3 +203,6 @@ import numpy as np
 # print(flipimage)
 # rotate_array=np.rot90(image_array)
 # print(rotate_array)
+
+
+print(".")
