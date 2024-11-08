@@ -230,16 +230,70 @@ import numpy as np
 # print(arr1)
 # print("mean",np.mean(arr1))
 
-# 
-arr=np.arange(1,17,1)
-print(arr)
-arr1=arr.reshape(4,4)
-print(arr1)
+# generate 2d array then apply slicing by subarray
+# arr=np.arange(1,17,1)
+# print(arr)
+# arr1=arr.reshape(4,4)
+# print(arr1)
 
-subarray=arr1[0:2,0:2]
-print(subarray)
-
-
+# subarray=arr1[0:2,0:2]
+# print(subarray)
 
 
+# linespace_of_num=np.linspace(0,100,7)
+# print(linespace_of_num)
 
+# date:7-11-2024
+
+#  /////............. topic ///////COPYING AND SORTING ARRAY/////////////////////
+# ////// shallow copy////////
+original_array = ([1,2,3,4,5])
+shallow_copy = original_array
+shallow_copy[0]=14
+print(original_array)
+print(shallow_copy)
+
+
+# ///// deep copy /////
+# original_array= ([1,2,3,4,5])
+# deep_copy=original_array.copy()
+# if u change list so write deep if u want no changes in list write original/////
+# deep_copy[3]=15          
+# print(deep_copy)
+
+# /////////////////////SORTING ARRAY/////////////////
+# array=np.array([5,9,3,2,7])
+# print(array)
+# sort_array=np.sort(array)
+# print(sort_array)
+# sort_desc=sort_array[::-1]
+# print(sort_desc)
+
+# ////sorting ny rows and column /////
+
+# array_2d=np.array([[3,2,5],[4,6,12],[8,10,9]])
+# print(array_2d)
+# sort_rows=np.sort(array_2d,axis=1)
+# print("sorting by rows",sort_rows)
+# sort_column=np.sort(array_2d,axis=0)
+# print("sorting by column",sort_column)
+
+
+# ////////argsort/////////
+# array= np.array([10,30,20])
+# sort_indexis=np.argsort(array)
+# print(sort_indexis)
+
+# sort_array = array [sort_indexis]
+# print(sort_array)
+
+# ///////filter sorting///////
+# array=np.array([5,6,7,8,9,10])
+# print(array)
+# sort_array=np.sort(array[array>7])
+# print(sort_array)
+# sort_desc=sort_array[::-1]
+# print(sort_desc)
+
+
+# date:8-11-2024
