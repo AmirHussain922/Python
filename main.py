@@ -247,11 +247,11 @@ import numpy as np
 
 #  /////............. topic ///////COPYING AND SORTING ARRAY/////////////////////
 # ////// shallow copy////////
-original_array = ([1,2,3,4,5])
-shallow_copy = original_array
-shallow_copy[0]=14
-print(original_array)
-print(shallow_copy)
+# original_array = ([1,2,3,4,5])
+# shallow_copy = original_array
+# shallow_copy[0]=14
+# print(original_array)
+# print(shallow_copy)
 
 
 # ///// deep copy /////
@@ -297,3 +297,93 @@ print(shallow_copy)
 
 
 # date:8-11-2024
+# pandas
+
+# import pandas as pd 
+# newfile=pd.read_csv('data.csv')
+# print(newfile)
+# # newfile['Calories'].fillna(91,inplace=True)
+# # newfile['date']=pd.NA
+# # newfile['date'].fillna('19-11-2024',inplace=True)
+# # newfile['Date'] = pd.to_datetime(newfile['Date'])
+# newfile['Date'] = pd.to_datetime(newfile['Date'], format='mixed')
+# newfile['Date'].dt.strftime('%d/%m/%Y')
+# newfile.dropna(subset=['Date'],inplace=True)
+# newfile.dropna(subset=['Calories'],inplace=True)
+# print(newfile.to_string())
+
+
+# newfile=pd.read_csv('data.csv')
+# newfile.loc[6,'Duration']=120
+# print(newfile.to_string)
+ 
+# newfile=pd.read_csv('data.csv')
+# for x in newfile.index:
+#     if newfile.loc[x,'Duration']>120:
+#         newfile.loc[x,'Duration']=120
+# print(newfile.to_string)
+
+
+
+# newfile=pd.read_csv('data.csv')
+# for x in newfile.index:
+#     if newfile.loc[x,'Duration']>120:
+#         newfile.drop(x,inplace= True)
+
+
+
+# print(newfile.duplicated())
+# newfile.drop_duplicates(inplace=True)
+# print (newfile.to_string)
+
+
+
+# mean=newfile['Calories'].mean()
+# newfile['Calories'].fillna(mean,inplace=True)
+
+# medium=newfile['Calories'].medium()
+# newfile['Calories'].fillna(medium,inplace=True)
+
+# mode=newfile['Calories'].mode()[0]
+# newfile['Calories'].fillna(mode, inplace=True)
+# print(newfile)
+# newfile=pd.read_csv('data1.csv')
+# print(newfile)
+
+# mean=newfile['salary'].mean()
+# print(mean)
+# median=newfile['age'].median()
+# print(median)
+# standar_deviations=newfile['salary'].std()
+# print(standar_deviations)
+# unique_dept=newfile['department'].value_counts()
+# print(unique_dept)
+
+# for x in newfile.index:
+#     if newfile.loc[x,'salary']<75000:
+#         newfile.drop(x,inplace= True)
+# print(newfile)
+
+# newfile=pd.read_csv('data1.csv')
+# print(newfile)
+# print(newfile.isnull().sum())
+# df=newfile.dropna()
+# print(df)
+# mean=newfile['age'].mean()
+# print(mean)
+# newfile['age'].fillna(mean,inplace=True)
+# print(newfile.to_string)
+import pandas as pd
+employee={
+    'name':['Amir','Ahmed','Ali','Aimen','Owais','Raza','Fahim','Hunain'],
+    'salary':[150000,50000,85000,35000,120000,25000,30000,65000],
+    'Jdate':['14/08/24','22/09/24','01/09/24','27/10/24','03/07/24','17/8/24','07/10/24','01/09/24']
+}
+
+df = pd.DataFrame(employee)
+df.to_csv('employee.csv',index=False)
+df=pd.read_csv('employee.csv')
+print(df)
+print(df['Jdate'])
+df['Jdate'] = pd.to_datetime(df['Jdate'], format='%y/%m/%d')
+print(df)
