@@ -363,7 +363,7 @@ import numpy as np
 #     if newfile.loc[x,'salary']<75000:
 #         newfile.drop(x,inplace= True)
 # print(newfile)
-
+import pandas as pd
 # newfile=pd.read_csv('data1.csv')
 # print(newfile)
 # print(newfile.isnull().sum())
@@ -373,17 +373,85 @@ import numpy as np
 # print(mean)
 # newfile['age'].fillna(mean,inplace=True)
 # print(newfile.to_string)
-import pandas as pd
-employee={
-    'name':['Amir','Ahmed','Ali','Aimen','Owais','Raza','Fahim','Hunain'],
-    'salary':[150000,50000,85000,35000,120000,25000,30000,65000],
-    'Jdate':['14/08/24','22/09/24','01/09/24','27/10/24','03/07/24','17/8/24','07/10/24','01/09/24']
-}
 
-df = pd.DataFrame(employee)
-df.to_csv('employee.csv',index=False)
-df=pd.read_csv('employee.csv')
-print(df)
-print(df['Jdate'])
-df['Jdate'] = pd.to_datetime(df['Jdate'], format='%y/%m/%d')
-print(df)
+# employee={
+#     'name':['Amir','Ahmed','Ali','Aimen','Owais','Raza','Fahim','Hunain'],
+#     'salary':[150000,50000,85000,35000,120000,25000,30000,65000],
+#     'Jdate':['14/08/24','22/09/24','01/09/24','27/10/24','03/07/24','17/8/24','07/10/24','01/09/24']
+# }
+
+# df = pd.DataFrame(employee)
+# df.to_csv('employee.csv',index=False)
+# df=pd.read_csv('employee.csv')
+# print(df)
+# print(df['Jdate'])
+# df['Jdate'] = pd.to_datetime(df['Jdate'], format='%y/%m/%d')
+# print(df)
+
+
+
+# df=pd.read_csv('task_data.csv')
+# # task
+# print(df.to_string)
+# mean=df['age'].mean()
+# print(mean)
+# median=df['salary'].median()
+# print(median)
+# df['age'].fillna(mean,inplace=True)
+# df['salary'].fillna(median,inplace=True)
+# print(df.to_string)
+# df['join_date'] = pd.to_datetime(df['join_date'], format='%y/%m/%d')
+# print(df['join_date'])
+# print(df.duplicated())
+# drop=df.drop_duplicates(inplace=True)
+# print(drop)
+# groupby=df.groupby('department')['salary'].mean()
+# print(groupby)
+# max=df['join_date'].max()
+# print(max)
+# min=df['join_date'].min()
+# print(min)
+
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+# import pandas as pd
+# x=[1,2,3,4,5]
+# y=[-2,-4,6,8,10]
+
+
+# x_np=np.array([1,2,3,4,5])
+# y_np=np.array([-1,-3,5,7,9])
+
+
+# data={
+#     'x':[-2,-1,0,1,2],
+#     'y':[1,2,3,4,5]
+# }
+# df=pd.DataFrame(data)
+
+# plt.plot(x,y,label='list_data',marker='*',ls='--',c='blue')
+# plt.plot(x_np,y_np ,label='Numpy_data',marker="o",ls='-.',c='yellow')
+# plt.plot(df['x'],df['y'],label='dframe_data',marker='^',ls=':',c='red')
+# plt.title('My Graph')
+# plt.xlabel('x-axies')
+# plt.ylabel('y-axies')
+# plt.legend()
+# plt.grid('true')
+# plt.show()
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x=np.linspace(-10,10,400)
+y1=x**2
+y2=-x**2
+plt.plot(x,y1 ,label='Numpy_data',marker="o",ls='-.',c='yellow')
+plt.plot(x,y2 ,label='Numpy_data',marker="o",ls='-.',c='green')
+plt.title('My Graph')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+plt.legend()
+plt.show()
