@@ -491,7 +491,7 @@ data={
 }
 df=pd.DataFrame(data)
 plt.pie(df['emp'],labels=df['dept'],autopct='%1.1f%%',startangle=360)
-plt.title('pie chart')
+plt.title('pie chart',fontfamily='serif')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
