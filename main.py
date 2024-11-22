@@ -443,15 +443,58 @@ import pandas as pd
 
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 
-x=np.linspace(-10,10,400)
-y1=x**2
-y2=-x**2
-plt.plot(x,y1 ,label='Numpy_data',marker="o",ls='-.',c='yellow')
-plt.plot(x,y2 ,label='Numpy_data',marker="o",ls='-.',c='green')
-plt.title('My Graph')
+# x=np.linspace(-10,10,400)
+# y1=x**2
+# y2=-x**2
+# plt.plot(x,y1 ,label='Numpy_data',marker="o",ls='-.',c='yellow')
+# plt.plot(x,y2 ,label='Numpy_data',marker="o",ls='-.',c='green')
+# plt.title('My Graph')
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.grid(True)
+# plt.legend()
+# plt.show()
+
+# x=[1,2,3,4,5,6]
+# y=[2,4,6,8,10,12]
+# plt.scatter(x,y,label="Scatter Chart", marker='o',c='red')
+# plt.title('Scatered Chart')
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.grid(True)
+# plt.savefig('scatter.png',dpi=300)
+# plt.show()
+
+
+
+# plt.bar(x,y,label="bar Chart")
+# plt.title('bar Chart')
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.grid(True)
+# plt.show()
+
+
+# x=[1.1,2,2,2,2,3,3,3,4,6,7,8,8]
+# plt.hist(x,bins=14)
+# plt.title('Histogram')
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.grid(True)
+# plt.show()
+
+data={
+    'dept':['SE','MT','CS','ED','IT','CBS'],
+    'emp':[6,35,4,20,2,1]
+}
+df=pd.DataFrame(data)
+plt.pie(df['emp'],labels=df['dept'],autopct='%1.1f%%',startangle=360)
+plt.title('pie chart')
 plt.xlabel('x')
 plt.ylabel('y')
-plt.grid(True)
 plt.legend()
+plt.grid(True)
+plt.savefig('Piechart.png',dpi=300)
 plt.show()
